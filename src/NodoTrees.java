@@ -12,15 +12,15 @@ public class NodoTrees <K extends Comparable<K>, V extends Comparable<V>>  imple
     // Atributos
 
     private K key;
-    private Value traduccion1;
-    private Value traduccion2;
+    private V traduccion1;
+    private V traduccion2;
 
     private NodoTrees NodoIzquierda;
     private NodoTrees NodoDerecha;
 
 
     // Constructor
-    public NodoTrees(K key, Value traduccion1, Value traduccion2) {
+    public NodoTrees(K key, V traduccion1, V traduccion2) {
 
         this.key = key;
         this.traduccion1 = traduccion1;
