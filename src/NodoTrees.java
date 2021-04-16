@@ -15,8 +15,9 @@ public class NodoTrees <K extends Comparable<K>, V extends Comparable<V>>  imple
     private V traduccion1;
     private V traduccion2;
 
-    private NodoTrees NodoIzquierda;
-    private NodoTrees NodoDerecha;
+
+
+    protected NodoTrees<String, String> NodoIzquierda, NodoDerecha;
 
 
     // Constructor
@@ -25,6 +26,8 @@ public class NodoTrees <K extends Comparable<K>, V extends Comparable<V>>  imple
         this.key = key;
         this.traduccion1 = traduccion1;
         this.traduccion2 = traduccion2;
+        NodoIzquierda = null;
+        NodoDerecha = null;
 
     }
 
@@ -54,15 +57,14 @@ public class NodoTrees <K extends Comparable<K>, V extends Comparable<V>>  imple
         return null;
     }
 
-
     @Override
     public V setValue(V value) {
         return null;
     }
 
-
     @Override
     public int compareTo(NodoTrees<K, V> o) {
-        return 0;
+        return this.key.compareTo(o.getKey());
     }
+
 }

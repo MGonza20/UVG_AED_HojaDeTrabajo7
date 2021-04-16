@@ -10,14 +10,10 @@ public class Controlador {
         try(BufferedReader in = new BufferedReader(new FileReader("asociations.txt"))) {
 
             String txt;
-
             ArrayList<String[]> traducciones = new ArrayList<String[]>();
 
             while ((txt = in.readLine()) != null) {
-                //String[] tokens = txt.split(",");
-
                 traducciones.add(txt.split(",") );
-
 
             }
             return traducciones;
@@ -27,7 +23,5 @@ public class Controlador {
             return null;
         }
     }
-
-
 
 }
