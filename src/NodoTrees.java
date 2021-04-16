@@ -1,18 +1,26 @@
+/**
+ * @ author Sara Paguaga
+ * @ reference https://www.baeldung.com/java-binary-tree
+ */
 
-public class NodoTrees {
+import com.sun.jdi.Value;
+
+import java.util.Map;
+
+public class NodoTrees <K extends Comparable<K>, V extends Comparable<V>>  implements Comparable<NodoTrees<K, V>> , Map.Entry<K,V> {
 
     // Atributos
 
-    private String key;
-    private String traduccion1;
-    private String traduccion2;
+    private K key;
+    private Value traduccion1;
+    private Value traduccion2;
 
     private NodoTrees NodoIzquierda;
     private NodoTrees NodoDerecha;
 
 
     // Constructor
-    public NodoTrees(String key, String traduccion1, String traduccion2) {
+    public NodoTrees(K key, Value traduccion1, Value traduccion2) {
 
         this.key = key;
         this.traduccion1 = traduccion1;
@@ -36,8 +44,25 @@ public class NodoTrees {
         return this.NodoDerecha;
     }
 
-    public String getKey() {
-        return this.key;
+    public K getKey() {
+        return key;
     }
 
+
+    @Override
+    public V getValue() {
+        return null;
+    }
+
+
+    @Override
+    public V setValue(V value) {
+        return null;
+    }
+
+
+    @Override
+    public int compareTo(NodoTrees<K, V> o) {
+        return 0;
+    }
 }
